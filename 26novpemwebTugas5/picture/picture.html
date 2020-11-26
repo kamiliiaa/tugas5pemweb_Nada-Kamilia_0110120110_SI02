@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Picker</title>
+</head>
+<body>
+    <style>
+        select {
+            background-color: rgb(103, 166, 224);
+            color: black;
+            position: relative;
+            top: 90%;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+        img {
+            width: 20%;
+            position: absolute;
+            top: 20%;
+            left: 40%;
+        }
+    </style>
+
+    <select class="" onchange="change_pic(this.value)">
+        <option value="">Select Image</option>
+        <option value="ariel">Princess Ariel</option>
+        <option value="cinderella">Princess Cinderella</option>
+        <option value="rapunzel">Princess Rapunzel</option>
+        <option value="snowwhite">Princess Snow White</option>
+
+    </select><br>
+    <img src="" id="gambar" alt="">
+    <script>
+        function change_pic(set) {
+            var photo
+            if(set == 'ariel'){ 
+                photo = "img/ariel.jpg"
+                alert('Princess Ariel : The princess of ocean ')
+            } else if(set == 'cinderella'){
+                photo = "img/cinderella.jpg"
+                alert('Princess Cinderella : she has shining glass slipper ')    
+            } else if(set == 'rapunzel'){
+                photo = "img/rapunzel.jpg"
+                alert('Princess Rapunzel : her long hair as like as high tower ')
+            } else if(set == 'snowwhite'){
+                photo = "img/snowwhite.jpg"
+                alert('Princess Snow White : she ate a poisoned apple ')
+
+            }
+            console.log(photo);
+            document.getElementById("gambar").src = photo
+        }
+    </script>
+    
+</body>
+</html>

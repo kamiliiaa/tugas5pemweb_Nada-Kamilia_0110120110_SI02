@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form validasi</title>
+  <style type="text/css">
+    body{
+      overflow-y: hidden;
+      margin:0;
+      padding: 0;
+      font-family: verdana;
+      background-color: #dda2a2;
+    }
+    form{
+      font-family: arial;
+      background-color: #ffffff;
+      width: 300px;
+      margin: 180px auto;
+      padding: 30px;
+      text-align: right;
+      color: #000000;
+      border-radius: 40px 10px;
+      box-shadow: 3px 3px 8px #393939;
+    }
+    input{
+      margin: 10px;
+    }
+    input.login{
+      background-color: #0096FF;
+      color: #E7E7E7;
+      font-family: verdana;
+      font-weight: bold;
+      border-radius: 10px;
+      padding: 5px 10px;
+      margin: 30px 10px auto 0px;
+      text-transform: uppercase;
+      transition: .2s;
+    }
+    input.login:hover{
+      background-color: #002e4e;
+      color: #027fe6;
+    }
+    p{
+      text-align:center;
+      margin: 40px auto;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #ffffff;
+      font-family: verdana;
+      background-color: #7c0808;
+    }  
+    </style>
+    </head>
+    <body>
+    <head>
+    <p>Isi Terlebih Dahulu</p>
+            </head>
+            <body>
+                
+                <div class="login">
+                    <form action="#" method="POST" onSubmit="validasi()">
+                        <div>
+                            <label>Nama :</label>
+                            <input type="text" name="nama" id="nama" />
+                        </div>
+                        <div>
+                            <label>Email :</label>
+                            <input type="email" name="email" id="email" />
+                        </div>
+                        <div>
+                            <label>Jam keberangkatan:</label>
+                            <input type="time" name="time" id="Jam" min="00.00 " max="23.59"/>
+
+                        </div>
+                        <div>
+                            <label>Tujuan keberangkatan :</label>
+                            <textarea cols="30" rows="5" name="alamat" id="alamat"></textarea>
+                        </div>
+                        <div>
+                            <label>Jumlah Tiket :</label>
+                            <input type="number" name="number" id="Jumlah tiket" />
+                        </div>
+                        <div>
+                            <input type="submit" value="Daftar" class="tombol">
+                        </div>
+                    </form>
+                </div>
+                
+            </body>
+            <script type="text/javascript">
+                function validasi() {
+                    var nama = document.getElementById("nama").value;
+                    var email = document.getElementById("email").value;
+                    var jam = document.getElementById("Jam").value;
+                    var tujuankeberangkatan = document.getElementById("tujuankeberangkatan").value;
+                    var Jumlahtiket= document.getElementById("jumlahtiket").value;
+
+                    if (namapelanggan!= "" && email!="" && jam!="" && tujuankeberangkatan!="" && Jumlahtiket!="") {
+                        return true;
+
+                    }else{
+                        alert('Anda harus mengisi data dengan lengkap !');
+                    }
+                }
+            </script>
+</html> 

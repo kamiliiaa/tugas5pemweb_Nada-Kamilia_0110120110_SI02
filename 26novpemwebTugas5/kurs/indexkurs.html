@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Kurs Rupiah</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="kurs.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+        <table class="Class">
+            <thead>
+                <tr>
+                    <th>Masukkan Nilai</th>
+                    <th>Valas</th>
+                    <th>Nilai Rupiah</th>
+                </tr>
+            </thead>
+            <body>
+                <tr>
+                    <td> <input tyoe="number" id="nilai" placeholder="Masukkan jumlah uang"></td>
+                    <td>
+                        <select name="" id="mata_uang" onchange="setHarga(this.value)">
+                            <option value="">Pilih Mata Uang</option>
+                            <option value="dolar_sg">Dolar Singapure</option>
+                            <option value="dolar_us">Dolar US</option>
+                            <option value="euro">Euro</option>
+                            <option value="ringgit">Ringgit Malaysia</option>
+                            <option value="riyal">Riyal Arab Saudi</option>
+                            <option value="yen">Yen Jepang</option>
+                        </select>"
+                    </td>
+                    <td><input type="text" id="hasil"></td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</body>
+</html>
